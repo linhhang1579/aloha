@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-- "10"
+  - "10"
 
 branches:
   only:
-  - master
+    - master
+    - prod
 
 addons:
   chrome: stable
@@ -16,23 +17,22 @@ before_script:
 install: npm install
 
 script:
-- ng lint
-- ng test
-- ng build --aot --prod --base-href https://aloha2309-dev.herokuapp.com
+  - ng lint
+  - ng test
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then ng build --aot --prod --base-href https://aloha-349e8.firebaseapp.com/
+  - if [ "$TRAVIS_BRANCH" == "prod" ]; then ng build --aot --prod --base-href https://aloha-prod-2309.firebaseapp.com/
 
 deploy:
   - provider: firebase
-    token:
-      secure: $FIREBASE_TOKEN
+    skip_cleanup: true
+    token: $FIREBASE_TOKEN
     project: "aloha-349e8"
     on:
       branch: master
+
   - provider: firebase
-    token:
-      secure: $FIREBASE_TOKEN
+    skip_cleanup: true
+    token: $FIREBASE_TOKEN
     project: "aloha-prod-2309"
     on:
       branch: prod
-#script:
-#  - if [ "$TRAVIS_BRANCH" == "master" ]; then ng build --prod; fi
-#  - if [ "$TRAVIS_BRANCH" != "master" ]; then ng build --dev; fi
