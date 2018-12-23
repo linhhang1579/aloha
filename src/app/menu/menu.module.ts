@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { MenuRoutingModule } from './menu-routing.module';
+import { MenuItemComponent } from './menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
-    MenuListComponent
+    MenuListComponent,
+    MenuItemComponent
   ],
   imports: [
     CommonModule,

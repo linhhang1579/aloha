@@ -25,7 +25,27 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false
+    browsers: ['ChromeNoSandBox'],
+    customLaunchers: {
+      ChromeNoSandBox: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      },
+      HeadlessChrome: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--no-sandbox',
+          '--headless'
+        ]
+      }
+    },
+    singleRun: false,
+    concurrency: Infinity
   });
+
+  if (process.env.TRAVIS) {
+    config.browsers = ['HeadlessChrome'];
+    config.singleRun = true;
+    config.browserDisconnectTimeout = 10000;
+  }
 };
