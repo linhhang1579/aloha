@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "default": "aloha-349e8"
+  }
+}
