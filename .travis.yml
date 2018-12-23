@@ -22,12 +22,17 @@ script:
 
 deploy:
   - provider: firebase
-    token: $FIREBASE_TOKEN
+    token:
+      secure: $FIREBASE_TOKEN
     project: "aloha-349e8"
     on:
       branch: master
   - provider: firebase
-    token: $FIREBASE_TOKEN
+    token:
+      secure: $FIREBASE_TOKEN
     project: "aloha-prod-2309"
     on:
       branch: prod
+#script:
+#  - if [ "$TRAVIS_BRANCH" == "master" ]; then ng build --prod; fi
+#  - if [ "$TRAVIS_BRANCH" != "master" ]; then ng build --dev; fi
