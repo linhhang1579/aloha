@@ -11,10 +11,8 @@ addons:
 
 before_script:
   - npm install -g @angular/cli@latest
-  - npm install
 
 cache:
-  yarn: true
   directories:
   - node_modules
 
@@ -22,11 +20,9 @@ script:
 - ng test
 - ng build --prod --base-href https://aloha2309-dev.herokuapp.com/
 
-
 deploy:
   provider: heroku
   app:
     master: aloha2309-dev
-    production: aloha2309
   api_key:
     secure: "15cf0ef7-7783-4f92-bff9-88620150b305"
