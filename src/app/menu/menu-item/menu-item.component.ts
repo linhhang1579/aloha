@@ -9,6 +9,6 @@ export class MenuItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 }
