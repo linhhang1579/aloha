@@ -12,6 +12,8 @@ addons:
 before_script:
   - npm install -g @angular/cli@latest
 
+install: npm install
+
 script:
 - ng lint
 - ng test
@@ -19,5 +21,6 @@ script:
 
 deploy:
   provider: heroku
-  local_dir: dist/aloha
+  app:
+    master: aloha2309-dev
   api_key: $HEROKU_AUTH_TOKEN
