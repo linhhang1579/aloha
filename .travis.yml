@@ -34,3 +34,7 @@ deploy:
     project: "aloha-prod-2309"
     on:
       branch: prod
+
+#script:
+#  - if [ "$TRAVIS_BRANCH" == "master" ]; then ng build --prod; fi
+#  - if [ "$TRAVIS_BRANCH" != "master" ]; then ng build --dev; fi
