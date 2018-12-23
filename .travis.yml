@@ -19,6 +19,7 @@ script:
 
 deploy:
   provider: heroku
+  local_dir: dist/aloha
   app:
     master: aloha2309-dev
   api_key: $HEROKU_AUTH_TOKEN
