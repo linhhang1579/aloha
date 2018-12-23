@@ -12,7 +12,7 @@ import { MenuItemComponent } from './menu-item/menu-item.component';
   ],
   imports: [
     CommonModule,
-    MenuRoutingModule,
+    MenuRoutingModule
   ]
 })
 export class MenuModule {
