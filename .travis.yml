@@ -20,5 +20,4 @@ deploy:
   provider: heroku
   app:
     master: aloha2309-dev
-  api_key:
-    secure: "15cf0ef7-7783-4f92-bff9-88620150b305"
+  api_key: $HEROKU_AUTH_TOKENd
