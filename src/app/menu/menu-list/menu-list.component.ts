@@ -9,7 +9,6 @@ export class MenuListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-
+  ngOnInit(): void {
   }
 }
