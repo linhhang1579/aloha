@@ -10,6 +10,7 @@ addons:
   chrome: stable
 
 before_script:
+  - npm install -g firebase-tools
   - npm install -g @angular/cli@latest
 
 install: npm install
@@ -19,8 +20,5 @@ script:
 - ng test
 - ng build --aot --prod --base-href https://aloha2309-dev.herokuapp.com
 
-deploy:
-  provider: heroku
-  app:
-    master: aloha2309-dev
-  api_key: $HEROKU_AUTH_TOKEN
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
