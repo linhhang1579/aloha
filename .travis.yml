@@ -20,5 +20,14 @@ script:
 - ng test
 - ng build --aot --prod --base-href https://aloha2309-dev.herokuapp.com
 
-after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+deploy:
+  - provider: firebase
+    token: $FIREBASE_TOKEN
+    project: "aloha-349e8"
+    on:
+      branch: master
+  - provider: firebase
+    token: $FIREBASE_TOKEN
+    project: "aloha-prod-2309"
+    on:
+      branch: prod
