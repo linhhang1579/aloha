@@ -12,10 +12,6 @@ addons:
 before_script:
   - npm install -g @angular/cli@latest
 
-cache:
-  directories:
-  - node_modules
-
 script:
 - ng test
 - ng build --prod --base-href https://aloha2309-dev.herokuapp.com
