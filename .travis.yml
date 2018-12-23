@@ -10,7 +10,8 @@ addons:
   chrome: stable
 
 before_script:
-- yarn global add @angular/cli
+  - npm install -g @angular/cli@latest
+  - npm install
 
 cache:
   yarn: true
