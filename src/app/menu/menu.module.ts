@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuItemComponent } from './menu-item/menu-item.component';
-import { MaterialConfigurationModule } from '../shared/material-configuration/material-configuration.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { MaterialConfigurationModule } from '../shared/material-configuration/ma
   imports: [
     CommonModule,
     MenuRoutingModule,
-    DragScrollModule,
-    MaterialConfigurationModule
+    SharedModule
   ]
 })
 export class MenuModule {

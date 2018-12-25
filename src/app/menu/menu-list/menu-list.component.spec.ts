@@ -3,7 +3,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { MenuListComponent } from './menu-list.component';
-import { MaterialConfigurationModule } from '../../shared/material-configuration/material-configuration.module';
+import { SharedModule } from '../../shared/shared.module';
 
 describe('MenuListComponent', () => {
   let component: MenuListComponent;
@@ -14,7 +14,7 @@ describe('MenuListComponent', () => {
       imports: [
         RouterTestingModule,
         HttpClientTestingModule,
-        MaterialConfigurationModule
+        SharedModule
       ],
       declarations: [ MenuListComponent ]
     })

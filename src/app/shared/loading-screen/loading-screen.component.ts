@@ -18,7 +18,7 @@ export class LoadingScreenComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadingSubscription = this.loadingScreenService.loadingStatusSubject.pipe(
-      debounceTime(200)
+      debounceTime(100)
     ).subscribe((value: boolean) => {
       this.isLoading = value;
     });
