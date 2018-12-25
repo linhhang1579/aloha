@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DragScrollModule } from 'ngx-drag-scroll';
-
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoadingScreenInterceptor } from './core/interceptors/loading.interceptor';
