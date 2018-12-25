@@ -40,7 +40,7 @@ export class LoadingScreenInterceptor implements HttpInterceptor {
         finalize(() => {
           this.activeRequests--;
           if (this.activeRequests === 0) {
-            // this.loadingScreenService.stopLoading();
+            this.loadingScreenService.stopLoading();
           }
         })
       );
