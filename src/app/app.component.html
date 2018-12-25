@@ -1,3 +1,5 @@
+
+
 <h1>
   {{ title }}
 </h1>
@@ -9,8 +11,5 @@
 
 <router-outlet></router-outlet>
 
-<mat-selection-list>
-  <mat-list-option *ngFor="let shoe of [1,2]">
-    {{ shoe }}
-  </mat-list-option>
-</mat-selection-list>
+<app-loading-screen [ngClass]="loadingScreenComponent.isLoading ? 'app-main-spinner' : ''" #appMainSpinner>
+</app-loading-screen>

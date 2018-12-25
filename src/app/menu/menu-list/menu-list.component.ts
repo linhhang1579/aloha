@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-menu-list',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class MenuListComponent implements OnInit {
   typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+    this.httpClient.get('https://reqres.in/api/unknown').subscribe(() => {});
   }
 }
