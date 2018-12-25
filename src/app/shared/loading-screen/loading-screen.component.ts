@@ -10,7 +10,7 @@ import { LoadingScreenService } from '../../core/services/loading-screen.service
   styleUrls: ['./loading-screen.component.scss']
 })
 export class LoadingScreenComponent implements OnInit, OnDestroy {
-  loading = false;
+  isLoading = false;
   loadingSubscription: Subscription;
 
   constructor(private loadingScreenService: LoadingScreenService) {
@@ -20,7 +20,7 @@ export class LoadingScreenComponent implements OnInit, OnDestroy {
     this.loadingSubscription = this.loadingScreenService.loadingStatusSubject.pipe(
       debounceTime(200)
     ).subscribe((value: boolean) => {
-      this.loading = value;
+      this.isLoading = value;
     });
   }
 

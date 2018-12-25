@@ -1,6 +1,4 @@
-<app-loading-screen>
 
-</app-loading-screen>
 
 <h1>
   {{ title }}
@@ -13,5 +11,5 @@
 
 <router-outlet></router-outlet>
 
-
-
+<app-loading-screen [ngClass]="loadingScreenComponent.isLoading ? 'app-main-spinner' : ''" #appMainSpinner>
+</app-loading-screen>
