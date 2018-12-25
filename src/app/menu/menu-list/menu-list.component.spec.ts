@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { MenuListComponent } from './menu-list.component';
 import { MaterialConfigurationModule } from '../../shared/material-configuration/material-configuration.module';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('MenuListComponent', () => {
   let component: MenuListComponent;
@@ -12,6 +13,7 @@ describe('MenuListComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
+        HttpClientTestingModule,
         MaterialConfigurationModule
       ],
       declarations: [ MenuListComponent ]
