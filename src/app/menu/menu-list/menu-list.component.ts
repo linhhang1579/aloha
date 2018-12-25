@@ -7,7 +7,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./menu-list.component.scss']
 })
 export class MenuListComponent implements OnInit {
-  typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+  typesOfShoes: string[] = ['Boots',
+    'Clogs', 'Loafers', 'Moccasins',
+    'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers', 'Boots', 'Clogs', 'Loafers',
+    'Moccasins', 'Sneakers'];
 
   constructor(private httpClient: HttpClient) { }
 
