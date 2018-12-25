@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { debounceTime } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 
@@ -7,8 +7,7 @@ import { LoadingScreenService } from '../../core/services/loading-screen.service
 @Component({
   selector: 'app-loading-screen',
   templateUrl: './loading-screen.component.html',
-  styleUrls: ['./loading-screen.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./loading-screen.component.scss']
 })
 export class LoadingScreenComponent implements OnInit, OnDestroy {
   loading = false;
@@ -18,7 +17,7 @@ export class LoadingScreenComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.loadingSubscription = this.loadingScreenService.loadingStatus$.asObservable().pipe(
+    this.loadingSubscription = this.loadingScreenService.loadingStatusSubject.pipe(
       debounceTime(200)
     ).subscribe((value) => {
       this.loading = value;

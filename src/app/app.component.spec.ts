@@ -3,12 +3,14 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
 import { MaterialConfigurationModule } from './shared/material-configuration/material-configuration.module';
+import { SharedModule } from './shared/shared.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
+        SharedModule,
         MaterialConfigurationModule
       ],
       declarations: [
