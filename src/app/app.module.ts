@@ -4,7 +4,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialConfigurationModule } from './shared/material-configuration/material-configuration.module';
 import { LoadingScreenInterceptor } from './core/interceptors/loading.interceptor';
 import { SharedModule } from './shared/shared.module';
 
@@ -16,8 +15,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     SharedModule,
     AppRoutingModule,
-    HttpClientModule,
-    MaterialConfigurationModule
+    HttpClientModule
   ],
   providers: [
     {
