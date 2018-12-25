@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialConfigurationModule } from './shared/material-configuration/material-configuration.module';
@@ -17,6 +18,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     AppRoutingModule,
     HttpClientModule,
+    DragScrollModule,
     MaterialConfigurationModule
   ],
   providers: [

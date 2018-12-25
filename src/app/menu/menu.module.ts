@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { MenuRoutingModule } from './menu-routing.module';
@@ -14,6 +15,7 @@ import { MaterialConfigurationModule } from '../shared/material-configuration/ma
   imports: [
     CommonModule,
     MenuRoutingModule,
+    DragScrollModule,
     MaterialConfigurationModule
   ]
 })
